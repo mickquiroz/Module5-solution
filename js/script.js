@@ -100,13 +100,13 @@ const obtenerNumeroAleatorioEnRango = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let catshoAll = ["A","B","C","CM","CSR","CU","D","DK","DS","F","FR","FY","L","NF","NL","NS","PF","SO","SR","SS","T","V","VG"];
+let catshoAll = ["A","B","C","CM","CU","D","DK","DS","F","FR","FY","L","NF","NL","PF","SO","SR","V","VG"];
   
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
-    menuItemsUrl + catshoAll[obtenerNumeroAleatorioEnRango(0,22)],
+    menuItemsUrl + catshoAll[obtenerNumeroAleatorioEnRango(0,18)],
     buildAndShowMenuItemsHTML);
 };
 
